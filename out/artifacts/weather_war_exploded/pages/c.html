@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="static/script/echarts.js"></script>
+    <script src="static/script/echarts.js"></script>
+</head>
+<body>
+asdsasda
+
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: '北京站平均气温展示'
+        },
+        tooltip: {},
+        legend: {
+            data: ['温度/华氏度']
+        },
+        xAxis: {
+            data: ['2015', '2016', '2017', '2018', '2019']
+        },
+        yAxis: {},
+        series: [
+            {
+                name: '温度',
+                type: 'line',
+                data: [55.14,55.92,56.07,55.45,56.15]
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</body>
+</html>
